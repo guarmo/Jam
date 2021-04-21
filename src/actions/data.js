@@ -1,11 +1,11 @@
-import { GET_DATA } from "./types";
+import { GET_DATA, DATA_ERROR } from "./types";
 import axios from "axios";
 
 // Action
 export const getSongs = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "https://api-stg.jam-community.com/song/trending"
+      "https://api-stg.jam-community.com/song/trendig"
     );
 
     dispatch({
@@ -13,6 +13,9 @@ export const getSongs = () => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
-    console.error(err);
+    dispatch({
+      type: DATA_ERROR,
+      payload: err,
+    });
   }
 };
