@@ -1,3 +1,1 @@
-// Here add actions
-
-export const EXAMPLE = "EXAMPLE";
+export const GET_DATA = "GET_DATA";
