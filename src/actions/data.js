@@ -1,11 +1,12 @@
+// @flow
 import { GET_DATA, DATA_ERROR } from "./types";
 import axios from "axios";
 
 // Action
-export const getSongs = () => async (dispatch) => {
+export const getSongs: function = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "https://api-stg.jam-community.com/song/trendig"
+      "https://api-stg.jam-community.com/song/trending"
     );
 
     dispatch({
@@ -15,7 +16,7 @@ export const getSongs = () => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: DATA_ERROR,
-      payload: err,
+      payload: err.message,
     });
   }
 };

@@ -1,4 +1,3 @@
-// Import types
 import { GET_DATA, DATA_ERROR } from "../actions/types";
 
 // Create initial state
