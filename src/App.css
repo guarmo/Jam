@@ -1,9 +1,5 @@
-.audio-controls .play svg,
-.audio-controls .pause svg {
-  height: 40px;
-  width: 40px;
-}
-
-.audio-controls path {
-  fill: white;
+body,
+.songEl {
+  background-color: #c2b6b6;
+  background-image: linear-gradient(315deg, #c2b6b6 0%, #576574 74%);
 }
