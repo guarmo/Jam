@@ -18,7 +18,9 @@ function App() {
   }, []);
   return (
     <Provider store={store}>
-      <Songs />
+      <div className="bg-gray-900 p-4">
+        <Songs />
+      </div>
     </Provider>
   );
 }

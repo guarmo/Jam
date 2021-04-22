@@ -13,7 +13,7 @@ const Songs = ({ data: { songs, error, loading } }) => {
           <h1>{error}</h1>
         )
       ) : (
-        songs.map((song) => <SongEl song={song} />)
+        songs.map((song, index) => <SongEl key={index} song={song} />)
       )}
     </div>
   );
