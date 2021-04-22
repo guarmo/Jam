@@ -32,8 +32,7 @@
     "eject": "react-scripts eject",
     "build": "babel src/ -d lib/",
     "prepublish": "npm run build",
-    "flow": "flow",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": [
