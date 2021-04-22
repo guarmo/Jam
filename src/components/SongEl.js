@@ -1,25 +1,33 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BsPlay, BsPause, BsHeart, BsHeartFill } from "react-icons/bs";
+import { connect } from "react-redux";
 import { useAlert } from "react-alert";
+import { likeSong } from "../actions/data";
 
 const SongEl = ({
-  song: {
-    name,
-    artist_name,
-    duration,
-    likes,
-    music_file_path,
-    cover_image_path,
-    song_release,
-  },
+  likeSong,
+  song: { id, name, artist_name, music_file_path, cover_image_path },
 }) => {
   const alert = useAlert();
-  // State
   const [isPlaying, setIsPlaying] = useState(false);
   const [liked, setLiked] = useState(false);
 
-  // Refs
   const audioRef = useRef(new Audio(music_file_path));
+
+  // On like
+  const onLike = (id) => {
+    alert.show("Track liked!");
+    setLiked(true);
+    console.log("like", id);
+    likeSong(id);
+  };
+
+  // On unlike
+  const onUnlike = () => {
+    alert.show("Track unliked!");
+    setLiked(false);
+    console.log("hit unlike route");
+  };
 
   useEffect(() => {
     if (isPlaying) {
@@ -47,20 +55,14 @@ const SongEl = ({
               <>
                 <BsHeartFill
                   className="cursor-pointer"
-                  onClick={() => {
-                    alert.show("Track unliked!");
-                    setLiked(false);
-                  }}
+                  onClick={() => onUnlike()}
                 />
               </>
             ) : (
               <>
                 <BsHeart
                   className="cursor-pointer"
-                  onClick={() => {
-                    alert.show("Track liked!");
-                    setLiked(true);
-                  }}
+                  onClick={() => onLike(id)}
                 />
               </>
             )}
@@ -85,4 +87,4 @@ const SongEl = ({
   );
 };
 
-export default SongEl;
+export default connect(null, { likeSong })(SongEl);
