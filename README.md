@@ -16,7 +16,7 @@ This coding challenge consists of a single page web application that:
 - Shares state across components using [Redux](https://redux.js.org/)
 - Uses [Tailwindcss](https://tailwindcss.com/) as a CSS framework
 - Is designed having in mind modularity & scalability; Follows the latest coding standards guidelines
-- Tests the correct rendering of the 'Song' component using [testing-library-react](https://testing-library.com/docs/react-testing-library/intro/)
+- Performs basic unity testing: the correct rendering of the 'Song' component using [testing-library-react](https://testing-library.com/docs/react-testing-library/intro/)
 - Hosts both front and back-end on [Netlify](https://jam-challenge.netlify.app/)
 - Has used [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as a Git workflow
 
