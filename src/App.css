@@ -1,5 +1,9 @@
-body,
 .songEl {
-  background-color: #c2b6b6;
-  background-image: linear-gradient(315deg, #c2b6b6 0%, #576574 74%);
+  background-color: #0d324d;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+
+body {
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #0d324d 0%, #7f5a83 74%);
 }
