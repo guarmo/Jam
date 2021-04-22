@@ -17,7 +17,7 @@ This coding challenge consists of a single page web application that:
 - Uses [Tailwindcss](https://tailwindcss.com/) as a CSS framework
 - Is designed having in mind modularity & scalability; Follows the latest coding standards guidelines
 - Performs basic unity testing: the correct rendering of the 'Song' component using [testing-library-react](https://testing-library.com/docs/react-testing-library/intro/)
-- Hosts both front and back-end on [Netlify](https://jam-challenge.netlify.app/)
+- Is hosted on [Netlify](https://jam-challenge.netlify.app/)
 - Has used [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as a Git workflow
 
 [Checkout the demo](https://jam-challenge.netlify.app/)
