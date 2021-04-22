@@ -1,9 +1,10 @@
-import { GET_DATA, DATA_ERROR } from "../actions/types";
+import { GET_DATA, DATA_ERROR, SET_LOADING } from "../actions/types";
 
 // Create initial state
 const initialState = {
   songs: null,
   error: null,
+  loading: false,
 };
 
 export default function alert(state = initialState, action) {
@@ -19,6 +20,11 @@ export default function alert(state = initialState, action) {
       return {
         ...state,
         error: payload,
+      };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: payload,
       };
     default:
       return state;

@@ -1,25 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import { getSongs } from "../actions/data";
+import { getSongs, setLoading } from "../actions/data";
 import SongEl from "./SongEl";
 
-const Songs = ({ getSongs, data, data: { songs, error } }) => {
-  useEffect(() => {
-    getSongs();
-  }, []);
-
+const Songs = ({ data: { songs, error, loading } }) => {
   return (
-    <>
-      {data &&
-        (error ? (
-          <h1>{error}</h1>
+    <div className="">
+      {!songs ? (
+        loading ? (
+          <h1>Loading...</h1>
         ) : (
-          songs &&
-          songs.map((song) => {
-            <SongEl song={song} />;
-          })
-        ))}
-    </>
+          <h1>{error}</h1>
+        )
+      ) : (
+        songs.map((song) => <SongEl song={song} />)
+      )}
+    </div>
   );
 };
 
@@ -27,4 +23,4 @@ const mapStateToProps = (state) => ({
   data: state.data,
 });
 
-export default connect(mapStateToProps, { getSongs })(Songs);
+export default connect(mapStateToProps, { setLoading, getSongs })(Songs);

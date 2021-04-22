@@ -1,8 +1,8 @@
 // @flow
-import { GET_DATA, DATA_ERROR } from "./types";
+import { GET_DATA, DATA_ERROR, SET_LOADING } from "./types";
 import axios from "axios";
 
-// Action
+// Get songs
 export const getSongs: function = () => async (dispatch) => {
   try {
     const res = await axios.get(
@@ -19,4 +19,12 @@ export const getSongs: function = () => async (dispatch) => {
       payload: err.message,
     });
   }
+};
+
+// Set loading
+export const setLoading: function = (bool) => async (dispatch) => {
+  dispatch({
+    type: SET_LOADING,
+    payload: bool,
+  });
 };
