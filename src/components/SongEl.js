@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-// import AudioControls from "./AudioControls";
 import { BsPlay, BsPause, BsHeart, BsHeartFill } from "react-icons/bs";
+import { useAlert } from "react-alert";
 
 const SongEl = ({
   song: {
@@ -13,6 +13,7 @@ const SongEl = ({
     song_release,
   },
 }) => {
+  const alert = useAlert();
   // State
   const [isPlaying, setIsPlaying] = useState(false);
   const [liked, setLiked] = useState(false);
@@ -43,15 +44,25 @@ const SongEl = ({
           </div>
           <div className="">
             {liked ? (
-              <BsHeartFill
-                className="cursor-pointer"
-                onClick={() => setLiked(false)}
-              />
+              <>
+                <BsHeartFill
+                  className="cursor-pointer"
+                  onClick={() => {
+                    alert.show("Track unliked!");
+                    setLiked(false);
+                  }}
+                />
+              </>
             ) : (
-              <BsHeart
-                className="cursor-pointer"
-                onClick={() => setLiked(true)}
-              />
+              <>
+                <BsHeart
+                  className="cursor-pointer"
+                  onClick={() => {
+                    alert.show("Track liked!");
+                    setLiked(true);
+                  }}
+                />
+              </>
             )}
           </div>
         </div>
