@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getSongs, setLoading } from "../actions/data";
 import SongEl from "./SongEl";
+import Spinner from "./Spinner";
 
 const Songs = ({ data: { songs, error, loading } }) => {
   return (
     <div data-testid="songs" className="w-1/2 m-auto">
       {!songs ? (
         loading ? (
-          <h1>Loading...</h1>
+          <Spinner />
         ) : (
           <h1>{error}</h1>
         )
