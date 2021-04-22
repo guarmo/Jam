@@ -13,7 +13,7 @@ function App() {
     store.dispatch(setLoading(false));
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     setLoadingAndFetch();
   }, []);
   return (

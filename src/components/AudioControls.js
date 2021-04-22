@@ -1,29 +1,14 @@
 import React from "react";
-import { ReactComponent as Play } from "../assets/play.svg";
-import { ReactComponent as Pause } from "../assets/pause.svg";
+import { BsPlay, BsPause, BsHeart, BsHeartFill } from "react-icons/bs";
 
 const AudioControls = ({ isPlaying, onPlayPauseClick }) => (
-  <div className="border-2 border-red-300 audio-controls my-auto">
+  <div className="flex justify-center items-center text-2xl">
     {isPlaying ? (
-      <button
-        type="button"
-        className="pause"
-        onClick={() => onPlayPauseClick(false)}
-        aria-label="Pause"
-      >
-        <Pause />
-      </button>
+      <BsPause onClick={() => onPlayPauseClick(false)} />
     ) : (
-      <button
-        type="button"
-        className="play"
-        onClick={() => onPlayPauseClick(true)}
-        aria-label="Play"
-      >
-        <Play />
-      </button>
+      <BsPlay onClick={() => onPlayPauseClick(true)} />
     )}
-    <div class="heart"></div>
+    <BsHeart />
   </div>
 );
 

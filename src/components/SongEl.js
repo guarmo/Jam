@@ -27,16 +27,16 @@ const SongEl = ({
   }, [isPlaying]);
 
   return (
-    <div className="el bg-gray-800 rounded-3xl p-1.5 shadow-xl m-auto my-10 text-white">
-      <div className="flex text-center z-10 relative">
-        <div className="border-2 border-red-300">
+    <div className="bg-gray-800 p-1.5 shadow-xl max-w-xs m-auto my-10 text-white">
+      <div className="text-center z-10 relative">
+        <div className="">
           <img
-            className="rounded-full m-auto w-40"
+            className="m-auto w-40"
             src={cover_image_path}
             alt={`track artwork for ${name} by ${artist_name}`}
           />
           <h2 className="font-bold">{name}</h2>
-          <h3 className="font-light mt-2">{artist_name}</h3>
+          <h3 className="font-light">{artist_name}</h3>
         </div>
         <AudioControls isPlaying={isPlaying} onPlayPauseClick={setIsPlaying} />
       </div>

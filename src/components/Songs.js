@@ -13,7 +13,9 @@ const Songs = ({ data: { songs, error, loading } }) => {
           <h1>{error}</h1>
         )
       ) : (
-        songs.map((song, index) => <SongEl key={index} song={song} />)
+        songs.map((song, index) => (
+          <SongEl key={index} index={index} song={song} />
+        ))
       )}
     </div>
   );
