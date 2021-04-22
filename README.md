@@ -1,4 +1,4 @@
-# coding-challenge :rocket:
+# JAM :rocket:
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/guarmo/jam)
 ![GitHub contributors](https://img.shields.io/github/contributors/guarmo/jam)
