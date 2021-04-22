@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BsPlay, BsPause, BsHeart, BsHeartFill } from "react-icons/bs";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { useAlert } from "react-alert";
 import { likeSong } from "../actions/data";
@@ -47,8 +48,8 @@ const SongEl = ({
         />
         <div className="flex items-center justify-center my-2 p-2">
           <div className=" w-full">
-            <h2 className="font-bold">{name}</h2>
-            <h3 className="font-light">{artist_name}</h3>
+            <h2 className="font-bold uppercase">{name}</h2>
+            <h3 className="font-thin uppercase">{artist_name}</h3>
           </div>
           <div className="">
             {liked ? (
@@ -85,6 +86,10 @@ const SongEl = ({
       </div>
     </div>
   );
+};
+
+SongEl.propTypes = {
+  likeSong: PropTypes.func.isRequired,
 };
 
 export default connect(null, { likeSong })(SongEl);

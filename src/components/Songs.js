@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getSongs, setLoading } from "../actions/data";
 import SongEl from "./SongEl";
@@ -21,6 +22,12 @@ const Songs = ({ data: { songs, error, loading } }) => {
       )}
     </div>
   );
+};
+
+Songs.propTypes = {
+  setLoading: PropTypes.func.isRequired,
+  getSongs: PropTypes.func.isRequired,
+  data: PropTypes.object,
 };
 
 const mapStateToProps = (state) => ({
