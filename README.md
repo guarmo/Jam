@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# coding-challenge :rocket:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/guarmo/jam)
+![GitHub contributors](https://img.shields.io/github/contributors/guarmo/jam)
+![GitHub stars](https://img.shields.io/github/stars/guarmo/jam?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/_guarmo?style=social)
 
-## Available Scripts
+![Screenshot](Screenshot.png)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+This coding challenge consists of a single page web application that:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Uses [Flow.js](https://flow.org/) to set types within the actions/data.js file
+- Creates a list of songs showing "Song Title", "Thumbnail Image", "Play/Pause Button", and "Like Button"
+- Shares state across components using [Redux](https://redux.js.org/)
+- Uses [Tailwindcss](https://tailwindcss.com/) as a CSS framework
+- Is designed having in mind modularity & scalability; Follows the latest coding standards guidelines
+- Tests the correct rendering of the 'Song' component using [testing-library-react](https://testing-library.com/docs/react-testing-library/intro/)
+- Hosts both front and back-end on [Netlify](https://jam-challenge.netlify.app/)
+- Has used [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as a Git workflow
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Checkout the demo](https://jam-challenge.netlify.app/)
 
-### `npm test`
+## Technologies used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React v17.0.1
+- Redux v4.0.5
+- Flow-bin v0.149.0
+- Babel v7.13.16
+- React-redux v7.2.2
+- Redux-thunk v2.3.0
+- Redux-devtools-extension v2.13.8
+- Axios v0.21.1
+- Tailwindcss v1.9.6
+- React-icons v4.2.0
+- React-alert v7.0.2
 
-### `npm run build`
+## Run locally :hammer_and_wrench:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the app locally, clone the repo and install the app using:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+  $ git clone https://github.com/guarmo/jam
+  $ cd jam
+  $ npm install
+  $ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Your app should now be running on [localhost:3000](http://localhost:3000/).
 
-### `npm run eject`
+## Unity testing :hammer_and_wrench:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To run the tests, after the installation run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+  $ npm run test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributors :sparkler:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is designed and developed by [Armando Guarino](https://armandoguarino.dev)
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Thanks for your interest in contributing! There are many ways to contribute to this project. Find out how [here](https://gist.github.com/MarcDiethelm/7303312).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Wishlist:
 
-### Code Splitting
+- Improve GUI
+- Implement like functionality 
+- Implement Flow to more components
+- Add further Unity Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the [MIT License](LICENSE.md).
