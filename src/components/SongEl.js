@@ -39,7 +39,10 @@ const SongEl = ({
   }, [isPlaying]);
 
   return (
-    <div className="songEl w-full p-1.5 shadow-2xl p-5 text-white text-center">
+    <div
+      data-testid="songEl"
+      className="songEl w-full p-1.5 shadow-2xl p-5 text-white text-center"
+    >
       <div style={{ minHeight: "80%" }} className="">
         <img
           className="m-auto min-w-3/4"

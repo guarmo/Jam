@@ -6,7 +6,7 @@ import SongEl from "./SongEl";
 
 const Songs = ({ data: { songs, error, loading } }) => {
   return (
-    <div className="w-1/2 m-auto">
+    <div data-testid="songs" className="w-1/2 m-auto">
       {!songs ? (
         loading ? (
           <h1>Loading...</h1>
@@ -15,9 +15,10 @@ const Songs = ({ data: { songs, error, loading } }) => {
         )
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {songs.map((song, index) => (
-            <SongEl key={index} index={index} song={song} />
-          ))}
+          {songs &&
+            songs.map((song, index) => (
+              <SongEl key={index} index={index} song={song} />
+            ))}
         </div>
       )}
     </div>
